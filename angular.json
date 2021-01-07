@@ -120,5 +120,8 @@
       }
     }
   },
-  "defaultProject": "angular-budget-app"
+  "defaultProject": "angular-budget-app",
+  "cli": {
+    "analytics": false
+  }
 }

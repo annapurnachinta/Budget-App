@@ -100,7 +100,7 @@ body {
 }
 
 .add_type{
-    width: 120px;
+    width: 200px;
     border: 1px solid #e7e7e7;
     height: 44px;
     font-size: 18px;
@@ -125,7 +125,7 @@ body {
 }
 
 .add_description { 
-    width: 400px;
+    width: 380px;
 }
 
 .add_value { 

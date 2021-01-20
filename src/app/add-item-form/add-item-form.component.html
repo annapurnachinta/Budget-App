@@ -1,0 +1,16 @@
+<form #itemForm="ngForm" (ngSubmit)="onSubmit(itemForm)">
+    <div class="add_container">
+        <select class="add_type" [ngModel]="item.currency" name="currency" >
+            <option selected hidden value="">Choose Currency</option>
+            <option value="Income" selected>Income</option>
+            <option value="Expenses">Expenses</option>
+        </select>
+        <input type="text" class="add_description" name="description"
+        placeholder="Add Description" [ngModel]="item.description">
+        <input type="number" class="add_value" placeholder="Value" name="amount" 
+        [ngModel]="item.amount">
+        <button class="add_btn" type="submit">
+            <i class="ion-ios-checkmark-outline" [disabled]="!itemForm.valid"></i>
+        </button>
+    </div>
+</form>

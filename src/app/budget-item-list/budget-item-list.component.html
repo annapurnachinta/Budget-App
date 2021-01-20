@@ -1,0 +1,18 @@
+<div class="income">
+    <h2 class="income-title">Income</h2>
+    <div class="income-list" *ngFor="let item of budgetItem">
+        <app-budget-item-card  
+        *ngIf="item.currency === 'Income'" 
+        [item]="item">
+        </app-budget-item-card>
+    </div>
+</div>
+<div class="expenses">
+    <h2 class="expenses-title">Expenses</h2>
+    <div class="expenses-list" *ngFor="let item of budgetItem">
+        <app-budget-item-card  
+        *ngIf="item.currency === 'Expenses'" 
+        [item]="item">
+        </app-budget-item-card>
+    </div>
+</div>

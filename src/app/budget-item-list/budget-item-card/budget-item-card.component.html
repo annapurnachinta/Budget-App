@@ -1,9 +1,9 @@
-<div class="item clearfix" [ngClass]="{ 'income': item.currency === 'Income' , 'expense': item.currency === 'Expenses' }">
+<div class="item clearfix" (click)="onCardClick()" [ngClass]="{ 'income': item.currency === 'Income' , 'expense': item.currency === 'Expenses' }">
     <div class="item_description">{{ item.description }}</div>
     <div class="right clearfix">
         <div class="item_value">{{ item.amount }}</div>
         <div class="item_delete">
-            <button class="item_delete--btn">
+            <button class="item_delete--btn" (click)="onDelete()">
                 <i class="ion-ios-close-outline"></i>
             </button>
         </div>

@@ -5,9 +5,8 @@
       </div>
       <div class="budget_value">
         {{totalBudget}}
-        <!-- {{budgetItem}} -->
       </div>
-      <div class="budget_income clearfix">
+      <!-- <div class="budget_income clearfix">
         <div class="budget_income-text">Income</div>
         <div class="right">
           <div class="budget_income-value">+ 1</div>
@@ -18,7 +17,7 @@
         <div class="right">
           <div class="budget_expenses-value">- 0</div>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
   <div class="bottom">
@@ -26,6 +25,9 @@
         <app-add-item-form (formSubmit)="addItem($event)"></app-add-item-form>
     </div>
     <div class="container clearfix">
-        <app-budget-item-list [budgetItem]="budgetItem"></app-budget-item-list>
+        <app-budget-item-list 
+        [budgetItem]="budgetItem" 
+        (delete)="deleteItem($event)"
+        (update)="updateItem($event)"></app-budget-item-list>
     </div>
   </div>

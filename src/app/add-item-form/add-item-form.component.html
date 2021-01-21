@@ -9,8 +9,9 @@
         placeholder="Add Description" [ngModel]="item.description">
         <input type="number" class="add_value" placeholder="Value" name="amount" 
         [ngModel]="item.amount">
-        <button class="add_btn" type="submit">
-            <i class="ion-ios-checkmark-outline" [disabled]="!itemForm.valid"></i>
+        <button class="add_btn" type="submit" [disabled]="!itemForm.valid">
+            <p *ngIf="isNewItem"><i class="ion-ios-checkmark-outline"></i></p>
+            <p *ngIf="!isNewItem">Update</p>
         </button>
     </div>
 </form>

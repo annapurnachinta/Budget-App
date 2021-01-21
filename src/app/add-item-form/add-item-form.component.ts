@@ -25,8 +25,26 @@ export class AddItemFormComponent implements OnInit {
   }
 
   onSubmit(form: NgForm){
+    var selectBox = document.querySelectorAll(".border");
+    selectBox.forEach(i => i.style.border = '1px solid #e7e7e7')
     this.formSubmit.emit(form.value)
     form.reset()
   }
 
+  changeFunc(event) {
+    var selectBox = document.querySelectorAll(".border");
+    var selectedValue = event.target.value
+    var selectBtn = document.getElementById("btn");
+
+    if(selectedValue == "Income"){
+      selectBox.forEach(i => i.style.border = '1px solid #28B9B5')
+      selectBtn.style.color = '#28B9B5'
+    }else if(selectedValue == "Expenses"){
+      selectBox.forEach(i => i.style.border = '1px solid #FF5049')
+      selectBtn.style.color = '#FF5049'
+    }else{
+      selectBox.forEach(i => i.style.border = '1px solid #e7e7e7')
+    }
+
+   }
 }
